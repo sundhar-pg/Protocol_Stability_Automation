@@ -197,7 +197,8 @@ with st.form("protocol_form"):
 
         bjic_dropdowns = load_bjic_case_dropdowns()
 
-        business_unit = st.text_input("Business Unit")
+        business_unit_options = ['Business Unit 1', 'Business Unit 2', 'Business Unit 3']  # Replace with actual options
+        business_unit = st.selectbox("Business Unit", business_unit_options)
 
         franchise = st.selectbox("Franchise", bjic_dropdowns["Franchise"])
 
