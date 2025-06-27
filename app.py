@@ -208,8 +208,10 @@ with st.form("protocol_form"):
 
         protocol_number_enovia = st.text_input("Stability Protocol Number (Enovia)")
 
-        product_name_formula = st.text_input("Product Name & Formula #")
-
+        product_name_formula = st.text_input("Product Name & Formula #", placeholder="E.g. Product 1, Product 2, Product 3")
+    
+        # Add a disclaimer note below the input box with the example format
+        st.markdown("<small>*Please enter product names separated by commas. E.g. <b>Product 1, Product 2, Product 3</b></small>", unsafe_allow_html=True)
         packaging_combined = multiselect_with_free_text("Packaging Configuration", bjic_dropdowns["Packaging_Configuration"])
 
         project_name = st.text_input("Project Name")
